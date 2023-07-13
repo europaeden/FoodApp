@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation.xml"
+    app:startDestination="@id/home2">
+
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.example.foodapp.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home2_to_placeList"
+            app:destination="@id/placeList" />
+        <action
+            android:id="@+id/action_home2_to_API"
+            app:destination="@id/API" />
+    </fragment>
+    <fragment
+        android:id="@+id/placeList"
+        android:name="com.example.foodapp.PlaceList"
+        android:label="fragment_place_list_list"
+        tools:layout="@layout/fragment_place_list_list" >
+        <action
+            android:id="@+id/action_placeList_to_API"
+            app:destination="@id/API" />
+    </fragment>
+    <fragment
+        android:id="@+id/API"
+        android:name="com.example.foodapp.API"
+        android:label="fragment_a_p_i"
+        tools:layout="@layout/fragment_a_p_i" >
+        <action
+            android:id="@+id/action_API_to_home2"
+            app:destination="@id/home2" />
+    </fragment>
+</navigation>
